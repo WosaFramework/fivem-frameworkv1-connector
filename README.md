@@ -1,5 +1,5 @@
 ---
-description: This is a guide on how to create your own resources with wosa!
+description: Start making your own resources with wosa today!
 ---
 
 # Create your own resource!
