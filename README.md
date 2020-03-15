@@ -10,7 +10,7 @@ description: This is a guide on how to create your own resources with wosa!
 The documantation provided is only for creating your own resources outside the framework. Never attempt to use these features inside the framework core.
 {% endhint %}
 
-![](.gitbook/assets/102146167-vector-line-web-concept-for-programming-linear-web-banner-for-coding-1.jpg)
+![World Of San Andreas - Create your first script today!](.gitbook/assets/102146167-vector-line-web-concept-for-programming-linear-web-banner-for-coding-1.jpg)
 
 > World Of San Andreas features a wide variety of development tools for out of resource usage. This documantation is originally created for developers that want to create scripts for the framework. These functions and events are not required for any resources unless you want to use data from the framework core.
 >
