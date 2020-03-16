@@ -497,9 +497,7 @@ Wosa.Game.RequestAnimDict(animDict)
 ```
 
 ```lua
-local closestPlayer = Wosa.Game.GetClosePlayer()
-
--- I guess this takes the nearest player from ped?
+local closestPlayer, closestDistance = Wosa.Game.GetClosestPlayer()
 ```
 
 ```lua
