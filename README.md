@@ -137,6 +137,12 @@ AddEventHandler('__WOSA:CLIENT:911_CALL', function(CallerPlayerID, coords, callI
 end)
 ```
 
+```lua
+AddEventHandler('__WOSA:CLIENT:SERVICE_CALL', function(CallerPlayerID, coords, callInfo, serviceCalled, newCallID)
+    print(coords.x, coords.y, coords.z)
+end)
+```
+
 ## Public Functions
 
 Public functions are functions that are provided with the [API connector](https://github.com/Clatanii/Wosa_Connector). The connector is used to transmit/receive data from wosa/your resource. The latest version of the connector\(s\) can be found at [https://github.com/Clatanii/wosa\_latest\_connector\_files](https://github.com/Clatanii/Wosa_Connector). To use the connectors do the following:
