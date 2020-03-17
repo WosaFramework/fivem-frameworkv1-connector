@@ -198,6 +198,10 @@ Wosa.User.RevivePed(playerID)
 #### Character & Inventory Classed
 
 ```lua
+Wosa.Character.SendAutomatedMessage(playerID, FromNumber, ToNumber, Message)
+```
+
+```lua
 local characterData = Wosa.Character.GetCharacterData(playerID)
 
 print(characterData.firstname)
