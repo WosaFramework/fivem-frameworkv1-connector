@@ -159,9 +159,9 @@ It is important that you load wosa\_core before loading any other resource using
 What can the connector file\(s\) access in your resource?
 
 1. [x] Get resource name.
-2. [ ] Send data to resource functions/events.
+2. [ ] Send data to other resource functions/events.
 3. [x] Get running connector version.
-4. [ ] Receive data from resource functions/events.
+4. [ ] Receive data from other resource functions/events.
 5. [x] Add a global resource table called `Wosa`.
 6. [x] stop/start the resource.
 
@@ -254,6 +254,21 @@ local availablePaymentMethods = Wosa.Inventory.GetAvailablePaymentMethods(player
 print(tostring(availablePaymentMethods[1])) -- Business Credit Card
 print(tostring(availablePaymentMethods[2])) -- Vanilla Credit Card 
 print(tostring(availablePaymentMethods[3])) -- Pocket Cash 
+```
+
+```lua
+-- All Payment Methods = 'RE_Cash' or 'RE_VanillaC' or 'RE_BusinessC'
+local balance = Wosa.Inventory.GetMoneyBalance(playerID, Payment)
+```
+
+```lua
+-- All Payment Methods = 'RE_Cash' or 'RE_VanillaC' or 'RE_BusinessC'
+Wosa.Inventory.RemoveMoney(playerID, Payment, Amount)
+```
+
+```lua
+-- All Payment Methods = 'RE_Cash' or 'RE_VanillaC' or 'RE_BusinessC'
+Wosa.Inventory.AddMoney(playerID, Payment, Amount)
 ```
 
 #### Faction & Job Classed
