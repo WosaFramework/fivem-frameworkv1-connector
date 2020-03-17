@@ -432,6 +432,7 @@ local vehicleData = Wosa.Game.VehicleToData(vehicle)
 ```
 
 ```lua
+-- specialData - you dont need to input anything here apparantly, Just some left over feature i guess?
 local vehicle = Wosa.Game.CreateVehicleFromData(vehicleData, x, y, z, h, dontNetwork, specialData?)
 ```
 
