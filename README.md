@@ -198,10 +198,6 @@ Wosa.User.RevivePed(playerID)
 #### Character & Inventory Classed
 
 ```lua
-Wosa.Character.SendAutomatedMessage(playerID, FromNumber, ToNumber, Message)
-```
-
-```lua
 local characterData = Wosa.Character.GetCharacterData(playerID)
 
 print(characterData.firstname)
@@ -252,8 +248,10 @@ Wosa.Inventory.RemoveItem(playerID, itemID, '')
 local doesItemExistInInventory = Wosa.Inventory.DoesItemNameExist(playerID, itemName)
 ```
 
+#### Character & Inventory Classed
+
 ```lua
-local availablePaymentMethods = Wosa.Inventory.GetAvailablePaymentMethods(playerID)
+local availablePaymentMethods = Wosa.Money.GetAvailablePaymentMethods(playerID)
 
 print(tostring(availablePaymentMethods[1])) -- Business Credit Card
 print(tostring(availablePaymentMethods[2])) -- Vanilla Credit Card 
@@ -262,17 +260,23 @@ print(tostring(availablePaymentMethods[3])) -- Pocket Cash
 
 ```lua
 -- All Payment Methods = 'RE_Cash' or 'RE_VanillaC' or 'RE_BusinessC'
-local balance = Wosa.Inventory.GetMoneyBalance(playerID, Payment)
+local balance = Wosa.Money.GetMoneyBalance(playerID, Payment)
 ```
 
 ```lua
 -- All Payment Methods = 'RE_Cash' or 'RE_VanillaC' or 'RE_BusinessC'
-Wosa.Inventory.RemoveMoney(playerID, Payment, Amount)
+Wosa.Money.RemoveMoney(playerID, Payment, Amount)
 ```
 
 ```lua
 -- All Payment Methods = 'RE_Cash' or 'RE_VanillaC' or 'RE_BusinessC'
-Wosa.Inventory.AddMoney(playerID, Payment, Amount)
+Wosa.Money.AddMoney(playerID, Payment, Amount)
+```
+
+#### Phone Classed
+
+```lua
+Wosa.Character.SendAutomatedMessage(playerID, FromNumber, ToNumber, Message)
 ```
 
 #### Faction & Job Classed
