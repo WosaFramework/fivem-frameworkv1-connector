@@ -388,6 +388,11 @@ local MyFactionRank = Wosa.Job.GetFactionRank()
 #### Game & Utilities Classed
 
 ```lua
+-- index name for each gender, so if male then it loads male only etc
+Wosa.Game.LoadEUPOutfit(MaleOutfit, FemaleOutfit)
+```
+
+```lua
 local weaponTable = Wosa.Game.GetCurrentWeapons()
 ```
 
