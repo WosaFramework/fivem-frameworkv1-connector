@@ -195,6 +195,10 @@ local isUserUsingAnyCharacter = Wosa.User.UsingAnyCharacter(playerID)
 Wosa.User.RevivePed(playerID)
 ```
 
+```lua
+Wosa.User.RevivePedWithAnimation(playerID, playerHeading, playerCoords, )
+```
+
 #### Character & Inventory Classed
 
 ```lua
@@ -290,7 +294,7 @@ Wosa.Faction.RemoveFaction(playerID, inventoryCharacterTable, JobName)
 ```
 
 ```
-Wosa.Faction.UpdateFaction(playerID, inventoryCharacterTable, JobName, FactionRank, FactionSubRank)
+Wosa.Faction.UpdateFaction(license, inventoryCharacterTable, JobName, FactionRank, FactionSubRank)
 ```
 
 ### Client Functions
@@ -449,7 +453,7 @@ local vehicleData = Wosa.Game.VehicleToData(vehicle)
 ```
 
 ```lua
--- specialData - you dont need to input anything here apparantly, Just some left over feature i guess?
+-- specialData - you dont need to input anything here apparantly, Just some left over feature i guess/for special stuff thats not needed?
 local vehicle = Wosa.Game.CreateVehicleFromData(vehicleData, x, y, z, h, dontNetwork, specialData?)
 ```
 
@@ -541,6 +545,28 @@ local closestPlayer, closestDistance = Wosa.Game.GetClosestPlayer()
 
 ```lua
 local players = Wosa.Game.GetPlayers()
+```
+
+#### Police Classed
+
+```lua
+Wosa.Police.Cuff(true)
+```
+
+```lua
+local isPlayerCuffed = Wosa.Police.isCuffed()
+```
+
+```lua
+Wosa.Police.Drag(true, byPlayerID)
+```
+
+```lua
+Wosa.Police.Seat(vehicle)
+```
+
+```lua
+Wosa.Police.Unseat()
 ```
 
 ## External Notes
