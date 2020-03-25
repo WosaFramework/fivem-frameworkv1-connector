@@ -319,14 +319,10 @@ local isUserUsingAnyCharacter = Wosa.User.GetIsAnyCharacterLoaded()
 Wosa.User.RevivePed()
 ```
 
-#### Character & Inventory Classed
+#### Character Classed
 
 ```lua
 local characterDatabaseTable = Wosa.Character.GetCharacterDatabase()
-```
-
-```lua
-local inventoryDatabaseTable = Wosa.Inventory.GetInventoryDatabase()
 ```
 
 ```lua
@@ -375,6 +371,12 @@ local firearmLicense = Wosa.Character.GetFirearmLicense()
 
 ```lua
 local CanCharacterBeLooted = Wosa.Character.GetCanBeLooted()
+```
+
+#### Inventory Classed
+
+```lua
+local inventoryDatabaseTable = Wosa.Inventory.GetInventoryDatabase()
 ```
 
 #### Faction & Job Classed
