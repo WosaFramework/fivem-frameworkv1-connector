@@ -373,6 +373,14 @@ local firearmLicense = Wosa.Character.GetFirearmLicense()
 local CanCharacterBeLooted = Wosa.Character.GetCanBeLooted()
 ```
 
+```lua
+local BAC = Wosa.Character.GetAlcoholInBlood()
+```
+
+```lua
+Wosa.Character.SetAlcoholInBlood(value)
+```
+
 #### Inventory Classed
 
 ```lua
