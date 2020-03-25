@@ -199,7 +199,7 @@ Wosa.User.RevivePed(playerID)
 Wosa.User.RevivePedWithAnimation(playerID, playerHeading, playerCoords, )
 ```
 
-#### Character & Inventory Classed
+#### Character Classed
 
 ```lua
 local characterData = Wosa.Character.GetCharacterData(playerID)
@@ -227,6 +227,16 @@ Wosa.Character.SetCanBeLooted(playerID, bool)
 ```lua
 local CanCharacterBeLooted = Wosa.Character.GetCanBeLooted(playerID)
 ```
+
+```lua
+local characters = Wosa.Character.GetCharacterDataFromName(firstname, lastname)
+```
+
+```lua
+local allCharacters = Wosa.Character.GetAllCharacters()
+```
+
+#### Inventory Classed
 
 ```lua
 local myInventory = Wosa.Inventory.GetItems(playerID)
@@ -294,7 +304,7 @@ Wosa.Faction.RemoveFaction(playerID, inventoryCharacterTable, JobName)
 ```
 
 ```
-Wosa.Faction.UpdateFaction(license, inventoryCharacterTable, JobName, FactionRank, FactionSubRank)
+Wosa.Faction.UpdateFaction(license, inventoryCharacterTable, JobName, FactionRank, FactionSubRank)3
 ```
 
 ### Client Functions
@@ -550,7 +560,7 @@ local players = Wosa.Game.GetPlayers()
 #### Police Classed
 
 ```lua
-Wosa.Police.Cuff(true)
+Wosa.Police.Cuff(bool)
 ```
 
 ```lua
@@ -558,7 +568,7 @@ local isPlayerCuffed = Wosa.Police.isCuffed()
 ```
 
 ```lua
-Wosa.Police.Drag(true, byPlayerID)
+Wosa.Police.Drag(bool, byPlayerID)
 ```
 
 ```lua
