@@ -236,6 +236,11 @@ local characters = Wosa.Character.GetCharacterDataFromName(firstname, lastname)
 local allCharacters = Wosa.Character.GetAllCharacters()
 ```
 
+```lua
+-- @p2: can be 'add' or 'set'
+Wosa.Character.ChangeDriverLicensePoints(playerID, 'add', 3)
+```
+
 #### Inventory Classed
 
 ```lua
