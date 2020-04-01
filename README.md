@@ -18,9 +18,9 @@ The documantation provided is only for creating your own resources outside the f
 >
 > Unlisted events and functions that are found by the community may be added or not due to various factors such as...
 >
-> 1. [ ] Is the feature safe to give out to other resources?
-> 2. [ ] Does the feature work as expected and do we even know how it works?
-> 3. [ ] Can the feature collide with other things?
+> * Is the feature safe to give out to other resources?
+> * Does the feature work as expected and do we even know how it works?
+> * Can the feature collide with other things?
 
 {% hint style="info" %}
 #### Check this out, These awesome pages have everything you need for creating resources!
