@@ -628,7 +628,7 @@ You are required to include the full item name with `RE_` or `RI_` before.
 | item\_dropable | Can the item be dropped. |
 | item\_givable | Can the item be given to others. |
 | item\_usable | Can the item be used. |
-| item\_space | The space in inventory the item takes up, default: 1. |
+| item\_space | The space in inventory the item takes up \(default: 1\) |
 
 ```lua
 local itemName = 'RI_EXAMPLE_ITEM'
