@@ -599,6 +599,12 @@ Wosa.Police.Seat(vehicle)
 Wosa.Police.Unseat()
 ```
 
+#### Utility Classed
+
+```lua
+newFormat = Wosa.Utility.ConvertSQLDateToLuaFormat(format)
+```
+
 ## External Notes
 
 ### Item Register
