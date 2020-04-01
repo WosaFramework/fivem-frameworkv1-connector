@@ -314,7 +314,13 @@ Wosa.Faction.RemoveFaction(playerID, inventoryCharacterTable, JobName)
 ```
 
 ```
-Wosa.Faction.UpdateFaction(license, inventoryCharacterTable, JobName, FactionRank, FactionSubRank)3
+Wosa.Faction.UpdateFaction(license, inventoryCharacterTable, JobName, FactionRank, FactionSubRank)
+```
+
+#### Utility Classed
+
+```lua
+newFormat = Wosa.Utility.ConvertSQLDateToLuaFormat(format)
 ```
 
 ### Client Functions
@@ -597,12 +603,6 @@ Wosa.Police.Seat(vehicle)
 
 ```lua
 Wosa.Police.Unseat()
-```
-
-#### Utility Classed
-
-```lua
-newFormat = Wosa.Utility.ConvertSQLDateToLuaFormat(format)
 ```
 
 ## External Notes
