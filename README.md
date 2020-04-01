@@ -264,10 +264,10 @@ Wosa.Inventory.RemoveItem(playerID, itemID, '')
 ```
 
 ```lua
-local doesItemExistInInventory = Wosa.Inventory.DoesItemNameExist(playerID, itemName)
+local doesItemExistInInventory = Wosa.Inventory.DoesItemNameExistInInventory(playerID, itemName)
 ```
 
-#### Character & Inventory Classed
+#### Money Classed
 
 ```lua
 local availablePaymentMethods = Wosa.Money.GetAvailablePaymentMethods(playerID)
