@@ -196,7 +196,7 @@ Wosa.User.RevivePed(playerID)
 ```
 
 ```lua
-Wosa.User.RevivePedWithAnimation(playerID, playerHeading, playerCoords, )
+Wosa.User.RevivePedWithAnimation(playerID, playerHeading, playerCoords)
 ```
 
 #### Character Classed
