@@ -288,6 +288,11 @@ Wosa.Money.RemoveMoney(playerID, Payment, Amount)
 ```
 
 ```lua
+-- Remove money from any payment method avaiable (recommended for general use)
+Wosa.Money.RemoveMoneyFromAny(playerID, Amount)
+```
+
+```lua
 -- All Payment Methods = 'RE_Cash' or 'RE_VanillaC' or 'RE_BusinessC'
 Wosa.Money.AddMoney(playerID, Payment, Amount)
 ```
