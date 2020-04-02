@@ -248,6 +248,10 @@ local myInventory = Wosa.Inventory.GetItems(playerID)
 ```
 
 ```lua
+Wosa.Inventory.Inventory.RemoveAllCustomItems(playerID)
+```
+
+```lua
 -- add 'RE_'(Reusable item) or 'RI_'(Remove On Use) before the item name
 -- the data types such as Bool1 can be used for 'custom' data later on use for example
 
