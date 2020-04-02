@@ -102,6 +102,12 @@ end)
 ### Client Events
 
 ```lua
+AddEventHandler('__WOSA:CLIENT:ON_CHARACTER_SWITCH', function()
+
+end)
+```
+
+```lua
 AddEventHandler('__WOSA:CLIENT:ITEM_USE', function(itemName, itemDisplayName, itemDatabaseID, itemRemovedOnUse)
 
 end)
@@ -126,7 +132,7 @@ end)
 ```
 
 ```lua
-AddEventHandler('__WOSA:SERVER:__WOSA:SERVER:ITEM_PICKUP', function(coordsOfItem, itemName, itemDisplayName)
+AddEventHandler('__WOSA:CLIENT:ITEM_PICKUP', function(coordsOfItem, itemName, itemDisplayName)
     print(coordsOfItem.x, coordsOfItem.y, coordsOfItem.z)
 end)
 ```
