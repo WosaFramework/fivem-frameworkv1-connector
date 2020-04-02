@@ -516,7 +516,7 @@ local input = Wosa.Game.KeyboardInput(DescText, ExampleText, MaxStringLenght)
 ```
 
 ```lua
-Wosa.Game.LoadMultiplayerPedToLocalFile()
+Wosa.Game.LoadAndDownloadMultiplayerPedFromDatabase()
 ```
 
 ```lua
@@ -528,6 +528,7 @@ Wosa.Game.SaveMultiplayerPed()
 ```
 
 ```lua
+-- use for combined method (local-database)
 Wosa.Game.SaveMultiplayerPedToLocalFile()
 ```
 
