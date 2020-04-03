@@ -616,6 +616,21 @@ Wosa.Police.Seat(vehicle)
 Wosa.Police.Unseat()
 ```
 
+#### Utility Classed
+
+```lua
+myWorldID = Wosa.Utility.GetPlayerWorldID()
+```
+
+```lua
+-- well, dosent need to be a int i guess can be str or float but recommended to use ID as it was built for it
+Wosa.Utility.SetPlayerWorldID(ID)
+```
+
+```lua
+Wosa.Utility.ResetPlayerWorldID()
+```
+
 ## External Notes
 
 ### Item Register
