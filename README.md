@@ -623,7 +623,7 @@ myWorldID = Wosa.Utility.GetPlayerWorldID()
 ```
 
 ```lua
--- well, dosent need to be a int i guess can be str or float but recommended to use ID as it was built for it
+-- well, dosent need to be a int i guess can be str or float but recommended to use int as it was built for it
 Wosa.Utility.SetPlayerWorldID(ID)
 ```
 
