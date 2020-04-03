@@ -432,11 +432,11 @@ local MyFactionRankFromDatabase = Wosa.Job.DownloadAndGetFactionRank(JobName)
 ```
 
 ```lua
-local MyFactionRank = Wosa.Job.GetFactionRank()
+local MyFactionRank = Wosa.Job.GetFactionRank(JobName)
 ```
 
 ```lua
-local MyFactionSubRank = Wosa.Job.GetFactionSubRank()
+local MyFactionSubRank = Wosa.Job.GetFactionSubRank(JobName)
 ```
 
 #### Game & Utilities Classed
