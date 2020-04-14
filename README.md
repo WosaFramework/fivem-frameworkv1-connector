@@ -439,7 +439,15 @@ local MyFactionRank = Wosa.Job.GetFactionRank(JobName)
 local MyFactionSubRank = Wosa.Job.GetFactionSubRank(JobName)
 ```
 
-#### Game & Utilities Classed
+#### Game Classed
+
+```lua
+local fuel = Wosa.Game.GetFuel(vehicle)
+```
+
+```lua
+Wosa.Game.SetFuel(vehicle, int)
+```
 
 ```lua
 -- index name for each gender, so if male then it loads male only etc
