@@ -627,6 +627,10 @@ Wosa.Police.Unseat()
 #### Utility Classed
 
 ```lua
+dev_mode = Wosa.Utility.isDevModeEnabled()
+```
+
+```lua
 myWorldID = Wosa.Utility.GetPlayerWorldID()
 ```
 
