@@ -23,10 +23,11 @@ CreateThread(function()
         Wait(0)
     end
     
+    print(LoadingConnectorVersion)
     TriggerEvent('WOSA:USER_DATA:LIBRARY:SERVER:GET_DATA'..LoadingConnectorVersion, function(data) Wosa = data end)
 end)
 
 RegisterNetEvent('WOSA:PUBLIC_API:GET_TYPE_TO_CLIENT')
-AddEventHandler('WOSA:PUBLIC_API:GET_TYPE_TO_CLIENT', function()
-	TriggerClientEvent('WOSA:PUBLIC_API:GET_TYPE_TO_CLIENT', source, WOSA_API.CONFIG.API_CONNECTOR_TYPE)
+AddEventHandler('WOSA:PUBLIC_API:GET_TYPE_TO_CLIENT', function(rec)
+	LoadingConnectorVersion = rec
 end)
