@@ -23,7 +23,6 @@ CreateThread(function()
         Wait(0)
     end
     
-    print(LoadingConnectorVersion)
     TriggerEvent('WOSA:USER_DATA:LIBRARY:SERVER:GET_DATA'..LoadingConnectorVersion, function(data) Wosa = data end)
 end)
 
