@@ -15,7 +15,7 @@ local WOSA_API = {}
 -- @ARRAY API CONFIG [SHOULD NOT BE TOUCHED]
 WOSA_API.CONFIG = {
 	API_SYNC_VERSION = 1.7,
-	API_CONNECTOR_TYPE = GetConvar('wosa.connector', 'v.1'),
+	API_CONNECTOR_TYPE = 'Loading',
 	API_SYNC_RESOURCE = GetCurrentResourceName(),
 }
 
@@ -25,12 +25,18 @@ WOSA_API.CONFIG = {
 
 CreateThread(function()
 	local ex = '_V1' if GetConvar('wosa.connector', 'v.1') == 'v.2' then ex = '_V2' end
+	WOSA_API.CONFIG.API_CONNECTOR_TYPE = ex
 	TriggerEvent('WOSA:USER_DATA:LIBRARY:SERVER:GET_DATA'..ex, function(data) Wosa = data end)
 end)
 
 --------------------------------
 --- API (MAIN EVENTS) EVENTS ---
 --------------------------------
+
+RegisterNetEvent('WOSA:PUBLIC_API:GET_TYPE_TO_CLIENT')
+AddEventHandler('WOSA:PUBLIC_API:GET_TYPE_TO_CLIENT', function()
+	TriggerClientEvent('WOSA:PUBLIC_API:GET_TYPE_TO_CLIENT', source, WOSA_API.CONFIG.API_CONNECTOR_TYPE)
+end)
 
 -- @ON RESOURCE START
 AddEventHandler('onResourceStart', function(resource)
