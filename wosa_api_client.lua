@@ -2,6 +2,33 @@
 --- WOSA API - OFFICIAL FILE ---
 --------------------------------
 
+
+
+
+
+--[[
+
+	"v2" is strongly adviced...
+	"v1" is still supported but not maintained by any core developer(s)...
+
+--]]
+--- --- --- --- --- --- --- --- ---
+-----------------------------------
+--- --- --- --- --- --- --- --- ---
+
+local version = 'v2'
+
+--- --- --- --- --- --- --- --- ---
+-----------------------------------
+--- --- --- --- --- --- --- --- ---
+
+
+
+
+
+
+
+
 ------------------
 --- API CONFIG ---
 ------------------
@@ -9,24 +36,8 @@
 -- @ARRAY API REGISTER
 Wosa = nil
 
--- @LOADING VAR
-local LoadingConnectorVersion = nil
-
 ------------------------------
 --- API (FROM WOSA) EVENTS ---
 ------------------------------
 
-CreateThread(function()
-    TriggerServerEvent('WOSA:PUBLIC_API:GET_TYPE_TO_CLIENT')
-    
-    while LoadingConnectorVersion == nil do
-        Wait(0)
-    end
-    
-    TriggerEvent('WOSA:USER_DATA:LIBRARY:SERVER:GET_DATA'..LoadingConnectorVersion, function(data) Wosa = data end)
-end)
-
-RegisterNetEvent('WOSA:PUBLIC_API:GET_TYPE_TO_CLIENT')
-AddEventHandler('WOSA:PUBLIC_API:GET_TYPE_TO_CLIENT', function(rec)
-	LoadingConnectorVersion = rec
-end)
+TriggerEvent('WOSA:USER_DATA:LIBRARY:SERVER:GET_DATA_'..version or 'v1', function(data) Wosa = data end)
