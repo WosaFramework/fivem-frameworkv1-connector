@@ -2,9 +2,36 @@
 --- WOSA API - OFFICIAL FILE ---
 --------------------------------
 
-------------------
---- API CONFIG ---
-------------------
+
+
+
+
+--[[
+
+	"v2" is strongly adviced...
+	"v1" is still supported but not maintained by any core developer(s)...
+
+--]]
+--- --- --- --- --- --- --- --- ---
+-----------------------------------
+--- --- --- --- --- --- --- --- ---
+
+local version = 'v2'
+
+--- --- --- --- --- --- --- --- ---
+-----------------------------------
+--- --- --- --- --- --- --- --- ---
+
+
+
+
+
+
+
+
+--------------------------
+--- API CONFIG PRIVATE ---
+--------------------------
 
 -- @ARRAY API REGISTER
 Wosa = nil
@@ -15,7 +42,6 @@ local WOSA_API = {}
 -- @ARRAY API CONFIG [SHOULD NOT BE TOUCHED]
 WOSA_API.CONFIG = {
 	API_SYNC_VERSION = 1.7,
-	API_CONNECTOR_TYPE = 'Loading',
 	API_SYNC_RESOURCE = GetCurrentResourceName(),
 }
 
@@ -23,20 +49,11 @@ WOSA_API.CONFIG = {
 --- API (FROM WOSA) EVENTS ---
 ------------------------------
 
-CreateThread(function()
-	local ex = '_V1' if GetConvar('wosa.connector', 'v.1') == 'v.2' then ex = '_V2' end
-	WOSA_API.CONFIG.API_CONNECTOR_TYPE = ex
-	TriggerEvent('WOSA:USER_DATA:LIBRARY:SERVER:GET_DATA'..ex, function(data) Wosa = data end)
-end)
+TriggerEvent('WOSA:USER_DATA:LIBRARY:SERVER:GET_DATA_'..version or 'v1', function(data) Wosa = data end)
 
 --------------------------------
 --- API (MAIN EVENTS) EVENTS ---
 --------------------------------
-
-RegisterNetEvent('WOSA:PUBLIC_API:GET_TYPE_TO_CLIENT')
-AddEventHandler('WOSA:PUBLIC_API:GET_TYPE_TO_CLIENT', function()
-	TriggerClientEvent('WOSA:PUBLIC_API:GET_TYPE_TO_CLIENT', source, WOSA_API.CONFIG.API_CONNECTOR_TYPE)
-end)
 
 -- @ON RESOURCE START
 AddEventHandler('onResourceStart', function(resource)
