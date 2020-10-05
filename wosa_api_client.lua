@@ -10,6 +10,9 @@
 -- @ARRAY API REGISTER
 Wosa = nil
 
+-- @CACHE
+local cached_resource = GetCurrentResourceName()
+
 ------------------------------
 --- API (FROM WOSA) EVENTS ---
 ------------------------------
@@ -22,12 +25,12 @@ TriggerEvent('WOSA:USER_DATA:LIBRARY:SERVER:GET_DATA_v2', function(data) Wosa = 
 
 t = function(key, data1, data2, data3, data4, data5, data6)
 	if data1 == nil then
-		return Wosa.Translate.Get()[GetCurrentResourceName()][Wosa.Translate.Language()][key] or Wosa.Translate.Get()[GetCurrentResourceName()]['en'][key] or key
+		return Wosa.Translate.Get()[cached_resource][Wosa.Translate.Language()][key] or Wosa.Translate.Get()[cached_resource]['en'][key] or key
 	else
-		if Wosa.Translate.Get()[GetCurrentResourceName()][Wosa.Translate.Language()][key] == nil and Wosa.Translate.Get()[GetCurrentResourceName()]['en'][key] == nil then
+		if Wosa.Translate.Get()[cached_resource][Wosa.Translate.Language()][key] == nil and Wosa.Translate.Get()[cached_resource]['en'][key] == nil then
 			return key
 		else
-			local cache = Wosa.Translate.Get()[GetCurrentResourceName()][Wosa.Translate.Language()][key] or Wosa.Translate.Get()[GetCurrentResourceName()]['en'][key]
+			local cache = Wosa.Translate.Get()[cached_resource][Wosa.Translate.Language()][key] or Wosa.Translate.Get()[cached_resource]['en'][key]
 
 			if data1 ~= nil then
 				cache = cache:gsub('#data1', data1)
