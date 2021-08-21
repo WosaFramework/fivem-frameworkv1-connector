@@ -19,18 +19,21 @@ local cached_resource = GetCurrentResourceName()
 
 TriggerEvent('WOSA:USER_DATA:LIBRARY:SERVER:GET_DATA_v2', function(data) Wosa = data end)
 
+local cached_language = Wosa.Translate.Get()
+local cached_selected_language = Wosa.Translate.Language()
+
 -------------------
 --- TRANSLATION ---
 -------------------
 
 t = function(key, data1, data2, data3, data4, data5, data6)
 	if data1 == nil then
-		return Wosa.Translate.Get()[cached_resource][Wosa.Translate.Language()][key] or Wosa.Translate.Get()[cached_resource]['en'][key] or key
+		return cached_language[cached_resource][cached_selected_language][key] or cached_language[cached_resource]['en'][key] or key
 	else
-		if Wosa.Translate.Get()[cached_resource][Wosa.Translate.Language()][key] == nil and Wosa.Translate.Get()[cached_resource]['en'][key] == nil then
+		if cached_language[cached_resource][cached_selected_language][key] == nil and cached_language[cached_resource]['en'][key] == nil then
 			return key
 		else
-			local cache = Wosa.Translate.Get()[cached_resource][Wosa.Translate.Language()][key] or Wosa.Translate.Get()[cached_resource]['en'][key]
+			local cache = cached_language[cached_resource][cached_selected_language][key] or cached_language[cached_resource]['en'][key]
 
 			if data1 ~= nil then
 				cache = cache:gsub('#data1', data1)
